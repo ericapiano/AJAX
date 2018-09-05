@@ -1,0 +1,18 @@
+body {
+  background: lightgray;
+}
+
+.jumbotron {
+  background: black;
+  bottom: 70%;
+  text-align: center;
+  border-bottom: 4px solid goldenrod;
+
+}
+
+.text {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+  color: white;
+
+}
