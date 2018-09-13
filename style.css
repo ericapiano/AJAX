@@ -6,13 +6,37 @@ body {
   background: black;
   bottom: 70%;
   text-align: center;
-  border-bottom: 4px solid goldenrod;
+  border-bottom: 10px solid salmon;
+  border-top: 10px solid salmon;
+  border-right: 10px solid salmon;
+  border-left: 10px solid salmon;
 
 }
 
 .text {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 22px;
-  color: white;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 50px;
+  color: pink;
+
+}
+
+.label{
+  color: aliceblue;
+}
+
+.container-fluid {
+  font-size: 14px;
+}
+
+
+
+.pictures {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.image {
+  height: 150px;
+  width: 150px;
 
 }

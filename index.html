@@ -1,67 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>GifTastic | Erica Piano</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-<!-- bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 
-<!-- font awesome pics -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-  <!-- google fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
-<!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-  <title>GIF</title>
-
-</head>
 <body>
 
-    <div class="jumbotron jumbotron-fluid"> <br>
-        <div class="container">
-          <h1 class="display-4"> 
-              <i class="fas fa-umbrella" style="color: white"></i>
-              <i class="far fa-snowflake" style="color: white"></i>
-              <i class="fas fa-cloud" style="color: white"></i>              
-              <i class="fas fa-sun" style="color: white"></i>
-              <i class="fas fa-bolt" style="color: white"></i>
-              <i class="fas fa-tint" style="color: white"></i>
+<div class="container">
+
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <!-- <h1 class="display-4"> 
+                <i class="button fas fa-umbrella" data-name="rain" style="color: white"></i>
+                <i class="button far fa-snowflake" data-name="snow" style="color: white"></i>
+                <i class="button fas fa-cloud" data-name="cloudy" style="color: white"></i>              
+                <i class="button fas fa-sun" data-name="sunny" style="color: white"></i>
+                <i class="button fas fa-bolt" data-name="lightning" style="color: white"></i>
+                <i class="button fas fa-tint" data-name="hail" style="color: white"></i> -->
+                <br>
+
+    </div>
+        
+    <div class="pictures">
+
+        <img class="image" data-name="toy story" src="images/buzz.jpg">
+        <img class="image" data-name="monsters inc" src="images/boo.jpg" >
+        <img class="image" data-name="brave" src="images/incredibles.jpg">
+        <img class="image" data-name="finding nemo" src="images/nemo.jpg">
+        <img class="image" data-name="cars3" src="images/cars.jpg">
+
+      </div>
+
+
+    <br><br>
+
+
+    <p class="text" style="font-size: 40px; font-weight: 300;">PIXAR MOVIES: API EDITION</p>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <form id="form">
               <br>
-          
-
-          </h1> 
-          <br><br>
+                <label for="user-input" style="color: white">Click a picture or button to display the movie's GIFS.<br>
+                   Click the GIF to make it move, click it again to make it stop. <br>
+                   Enter your favorite Pixar movie to see its GIFS, too!</label><br>
+                <input type="text" id="user-input">
+                <input id="submitPress" type="submit" value="Submit" class="btn btn-default">
+            </form>
         </div>
-        <p class= "text">
-            Click on a weather type below to show its GIF! Don't see the weather you're looking for? Add it in!
+    </div>
 
+    <div class="row">
+        <div class="col-md-12" id="display-buttons"></div>
+    </div>
 
-        </p>
-      </div>
+</div>    
 
-      <form id="weather-form">
-        <label for="weather-input">Search for a weather pattern</label>
-        <input type="text" id="weather-input"><br>
-  
-        <!-- This button will trigger our AJAX call -->
-        <input id="find-weather" type="submit" value="Weather Search">
-      </form>
+<!-- show gifs on page, not jumbotron -->
 
-      <div id="gif-view">
+<div class="row">
+    <div class="col-md-12" id="display-images"></div>
+</div>
 
-      </div>
-
-
-
-<!-- jquery -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-<!-- JS -->
-<script src="app.js"></script>
-
+<!-- Link to JS -->
+<script src="game.js"></script>
 </body>
 </html>
