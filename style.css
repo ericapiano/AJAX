@@ -6,17 +6,19 @@ body {
   background: black;
   bottom: 70%;
   text-align: center;
-  border-bottom: 10px solid salmon;
-  border-top: 10px solid salmon;
-  border-right: 10px solid salmon;
-  border-left: 10px solid salmon;
+  border-bottom: 10px solid aqua;
+  border-top: 10px solid yellow;
+  border-right: 10px solid greenyellow;
+  border-left: 10px solid red;
+  clear: both;
+  width: 100%;  
 
 }
 
 .text {
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 50px;
-  color: pink;
+  color: yellow;
 
 }
 
@@ -36,7 +38,19 @@ body {
   align-items: center;
 }
 .image {
-  height: 150px;
-  width: 150px;
+  height: 180px;
+  width: 200px;
 
 }
+
+.gif{
+  height: 50%;
+  flex-wrap: wrap;
+  width: 50%;
+
+}
+
+#input {
+
+}
+

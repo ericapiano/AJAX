@@ -2,17 +2,15 @@ $(document).ready(function(){
 
   //why is this not working??? VV
 
-  $("crystal").click(function(event) {
-    event.preventDefault();
-    var selected = $(this).attr('data-name');
-    console.log(selected);
-    search(selected);
+  // $(".image").click(function(event) {
+  //   event.preventDefault();
+  //   var selected = $(this).attr('data-name');
+  //   console.log(selected);
+  //   displayImg(selected);
 
-  });
+  // });
 
-
-
-  var displayedButtons = ["toy story", "UP", "coco"];
+  var displayedButtons = ["Minnie Mouse", "Peter Pan", "Gaston"];
 
   function displayImg(){
 
@@ -65,6 +63,7 @@ $(document).ready(function(){
       }
   }
 
+  
   function imageChangeState() {          
 
       var state = $(this).attr("data-state");
@@ -95,6 +94,6 @@ $(document).ready(function(){
 
   renderButtons();
 
-  $(document).on("click", "#input", displayImg);
+  $(document).on("click", "[data-name]", displayImg);
   $(document).on("click", ".gif", imageChangeState);
 });
