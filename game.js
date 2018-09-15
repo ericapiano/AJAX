@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-  $("#find-weather").on("click", function(event) {
+  $("#submitPress").on("click", function(event) {
   
   event.preventDefault();
   
   
-  var weather = $("#weather-input").val().trim();
+  var weather = $("#submitPress").val().trim();
   
   var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + weather + "&api_key=CpvK7O9GXdSIyzQAwhyTmPGGT2Ai3eRA&limit=10";
   
