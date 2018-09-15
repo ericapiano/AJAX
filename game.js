@@ -7,7 +7,7 @@ $(document).ready(function(){
   
   var weather = $("#submitPress").val().trim();
   
-  var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + weather + "&api_key=CpvK7O9GXdSIyzQAwhyTmPGGT2Ai3eRA&limit=10";
+  var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + character + "&api_key=CpvK7O9GXdSIyzQAwhyTmPGGT2Ai3eRA&limit=10";
   
   
    $.ajax({
