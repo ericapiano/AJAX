@@ -21,7 +21,7 @@ $(document).ready(function () {
 
       for (var i = 0; i < results.length; i++) {
         console.log(results[i].images.fixed_height.url);
-        var gifDiv = $("<div>");
+        var gifDiv = $("<div class='gifDiv'>");
 
         // var rating = results[i].rating;
 
@@ -36,12 +36,27 @@ $(document).ready(function () {
         var gifImage = $("<img>");
         gifImage.attr("src", stillImage);
 
-        gifImage.attr("data_still", stillImage);
+        gifImage.attr("data-still", stillImage);
 
-        gifImage.attr("data_animate", animated);
+        gifImage.attr("data-animate", animated);
 
         gifImage.attr("state", stillImage);
 
+        gifImage.on("click", function () {
+          var state = $(this).attr("state");
+          var dataStill = $(this).attr("data-still");
+          var dataAnimate = $(this).attr("data-animate");
+
+          if (state === dataStill) {
+            $(this).attr("state", dataAnimate);
+            $(this).attr("src", dataAnimate);
+          }
+          else {
+            $(this).attr("state", dataStill);
+            $(this).attr("src", dataStill);
+          }
+
+        })
         // gifDiv.append(p);
         gifDiv.append(gifImage);
 
@@ -51,5 +66,6 @@ $(document).ready(function () {
 
     });
 
-  });
+  });  
+
 });
